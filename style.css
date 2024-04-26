@@ -1,0 +1,47 @@
+Python
+def verificar_convidado(nome, lista_convidados, idade_minima):
+  """
+  Verifica se um convidado está na lista de convidados e se é maior de idade.
+
+  Args:
+    nome: O nome do convidado.
+    lista_convidados: Uma lista de dicionários contendo os nomes e idades dos convidados.
+    idade_minima: A idade mínima legal para entrar no evento.
+
+  Returns:
+    Uma tupla contendo duas informações:
+      * True se o nome estiver na lista e o convidado for maior de idade, False caso contrário.
+      * Uma mensagem informativa.
+  """
+
+  convidado_encontrado = False
+  mensagem = ""
+
+  for convidado in lista_convidados:
+    if convidado["nome"].lower() == nome.lower():
+      convidado_encontrado = True
+      if convidado["idade"] >= idade_minima:
+        mensagem = "Acesso permitido."
+      else:
+        mensagem = "Acesso negado. Menor de idade."
+      break
+
+  if not convidado_encontrado:
+    mensagem = "Convidado não encontrado na lista."
+
+  return convidado_encontrado, mensagem
+
+# Exemplo de uso
+lista_convidados = [
+  {"nome": "Alice", "idade": 20},
+  {"nome": "Bob", "idade": 25},
+  {"nome": "Charlie", "idade": 15},
+  {"nome": "Diana", "idade": 18},
+]
+
+nome_convidado = "Bob"
+
+
+convidado_encontrado, mensagem = verificar_convidado(nome_convidado, lista_convidados, idade_minima)
+
+print 

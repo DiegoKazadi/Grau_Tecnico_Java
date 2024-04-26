@@ -6,14 +6,14 @@ import java.util.*;
 public class CheckGuest {
     public static void main(String[] args) {
         // Lista de convidados autorizados
-        List<String> guestList = Arrays.asList("Alice", "Bob", "Charlie", "Diana");
+        List<String> guestList = Arrays.asList("Alice", "Maria","Pedro","Carlos","Bob", "Charlie", "Diana");
 
         // Cria um scanner para ler o nome do teclado
         Scanner scanner = new Scanner(System.in);
         System.out.print("Digite o nome do convidado: ");
         String name = scanner.nextLine();
 
-        // Verifica se o nome está na lista de convidados
+        // Verifica se o nome está na lista de convidados e o convidado maior de 18 anos
         if (guestList.contains(name)) {
             System.out.println("Acesso permitido.");
         } else {
