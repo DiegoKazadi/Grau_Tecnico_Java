@@ -23,4 +23,7 @@ Para contribuir para este repositório, siga os passos abaixo:
 
 Antes de enviar seu *pull request*, certifique-se de que seu código segue as diretrizes de contribuição e estilo adotadas pelo projeto.
 
-## Código de Cond
+## Código de ANA CARLA ANACLETO 
+Criei uma pasta com meu nome e adicionei dois arquivos:
+- **ola.py**: arquivo python estilo *hello world*
+- **teste.sh**: arquivo shell que imprime mensagem simples
